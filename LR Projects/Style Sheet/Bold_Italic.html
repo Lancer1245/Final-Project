@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<! affect div by using inline css in the head. % is relative to the page size>
+
+		<link rel="stylesheet" type="text/css" href="external.css">
+
+		<style type="text/css">
+			div{
+				border: solid 3px black;
+				background-color: #F0CCF0;
+				height: 100px;
+				width: 50%;
+				padding: 15px 0px 15px 0px;
+				margin top: 80px;
+			}
+			img{
+				width:30%;
+
+			}
+
+			img{
+				height: 250px;
+				width: 25%;
+				float: left;
+			}
+	/*without commas i would be effecting an h1 inside an h2 inside an h3*/
+
+	/*DRY Don't Repeat Yourself. Don't let your code become dry. */
+
+			h1, h2 {
+				color:rgb(112,4,22);
+				font-style: italic;
+
+			}
+		</style>
+	</head>
+	<body>
+	<!-- div is a container placed in the body for holding other elements-->
+	<!--grouping elements-->
+
+		<p>
+
+
+		<img src="https://i.pinimg.com/originals/fe/50/41/fe504111be3ae74c3a608d9482a42397.png">Stuff Stuff Stuff<br>
+		Stuff Stuff Stuff<br>
+		Stuff Stuff Stuff<br>
+		Stuff Stuff Stuff<br>
+		Stuff Stuff Stuff<br>
+		Stuff Stuff Stuff<br>
+		Stuff Stuff Stuff<br>
+
+		</p>
+
+		<h1>Silence</h1>
+		<h2>Loudness</h2>
+		<h3>Peace</h3>
+
+		<div>
+			<h1>I'm losing it Lance</h1>
+		</div>
+
+	<p> I <strong> Love </strong> Mondays (; </p>
+	<p style="font-weight: bold; ">What's your favorite ice cream?</p>
+	<p style="font-style: italic;  ">Rum And The Raisin</p>
+	<img src="https://www.haagendazs.us/sites/default/files/packages/3d_hdic_14oz_rumraisin.png">
+
+	<!-- relative unit of size in css is good for cross platforms of development-->
+
+	</body>
+</html>

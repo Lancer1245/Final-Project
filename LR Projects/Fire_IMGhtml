@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1>Give me some text Hello Everybody</h1>
+		<h6>Goodbye People</h6>
+		<p>Welcome to this wonderful class taught by a wonderful instructor TRE</p>
+
+		<img src="https://accounts.google.com/SignOutOptions?hl=en&continue=https://mail.google.com/mail&service=mail">
+
+		<ul type="square">
+			<li>Eggs</li>
+			<li>Water</li>
+			<li>Milk</li>
+			<li>Orange Juice</li>
+		</ul>
+
+		<ol type="I">
+			<li>Eggs</li>
+			<li>Water</li>
+			<li>Milk</li>
+			<li>Orange Juice</li>
+		</ol>
+		<table border="3">
+			<tr>
+				<th colspan="2">Favorite Pies</th>
+			</tr>
+			<tr>
+				<th>Flavor</th>
+				<th>Price</th>
+			</tr>
+			<tr>
+				<td>Cherry</td>
+				<td>$2.00</td>
+			</tr>
+			<tr>
+				<td>Pumpkin</td>
+				<td>$3</td>
+
+			</tr>
+		</table>
+	</body>
+</html>
