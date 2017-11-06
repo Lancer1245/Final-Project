@@ -19,11 +19,16 @@
 			line
 			comment*/
 
-			var person = prompt("Please enter your name", "Harry Potter");
+			//gets list of all the h1 elements in webpage.
+
+	var h1Elements = document.getElementsByTagName("h1");
+	var person = prompt("Please enter your name", "First Last Name");
 
 	if (person == null || person == "") {
 	    txt = "User cancelled the prompt.";
-	} else {
+	} 
+
+	else {
 	    txt = "Hello " + person + "! How are you today?";
 }
 		console.log("Hello World");
