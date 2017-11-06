@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+
+		<!--CSS Goes in the head whereas Javascript goes last in the body to make sure all your elements are run 1st. This is a rule of thumb. HtML is simple. JS is complex and much to load.-->
+
+	</head>
+
+	<body>
+		<!-- This is a comment -->
+
+		<h1 id="Name">Look At Console to see message</h1>
+		<h1 id="Day">Tomorrow is Lance's Friend Day</h1>
+		<h1 id="cream">He likes Rum Raisin Ice-Cream</h1>
+		<h2 id="new text"></h2>
+		<script type="text/javascript">
+
+			//Displays message to console
+			/*Multi
+			line
+			comment*/
+
+			
+
+
+	//gets user's info with result hello-name and how are you?
+
+	var person = prompt("Please enter your name", "First Last Name");
+
+	if (person == null || person == "") {
+	    txt = "User cancelled the prompt.";
+	} 
+
+	else {
+	    txt = "Hello " + person + "! How are you today?";
+	}
+
+	    //gets list of all the h1 elements in webpage.
+
+	var h1Elements = document.getElementsByTagName("h1");
+
+	console.log(h1Elements);
+
+	//gets element of specified id
+
+	var creamElement = document.getElementById("cream");
+
+	//changes text of element
+
+	creamElement.innerHTML = 'MORE Ice-Cream';
+
+	//changes color of the element to whatever is typed in prompt
+
+	creamElement.style.color = prompt('Give me a color');
+
+
+		console.log("Hello World");
+		console.log("Boom");
+		console.log("Shocka lacka");
+
+		//CONCTENATION: the '+' is allowing me to join two values
+
+		console.log("What is Your Name? " + prompt() );
+		console.log("Favorite Hobby? " + prompt() );
+		console.log("What is Your Favorite Color? " + prompt() );
+
+		document.getElementById('new text').innerHTML = 'Sam my classmate is lost';
+		document.getElementById('Name');
+		document.getElementById('Day');
+		</script>
+
+		<!--Using JS with external file-->
+
+		<script src="Javascript_External 101.JS" type="text/javascript"></script>
+		
+	</body>
+</html>
