@@ -10,9 +10,10 @@
 	<body>
 		<!-- This is a comment -->
 
-		<h1>Look At Console to see message</h1>
-		<h1>Tomorrow is Lance's Friend Day</h1>
+		<h1 id="Name">Look At Console to see message</h1>
+		<h1 id="Day">Tomorrow is Lance's Friend Day</h1>
 		<h1 id="cream">He likes Rum Raisin Ice-Cream</h1>
+		<h2 id="new text"></h2>
 		<script type="text/javascript">
 
 			//Displays message to console
@@ -50,7 +51,7 @@
 	creamElement.innerHTML = 'MORE Ice-Cream';
 
 	//changes color of the element to whatever is typed in prompt
-	
+
 	creamElement.style.color = prompt('Give me a color');
 
 
@@ -64,6 +65,9 @@
 		console.log("Favorite Hobby? " + prompt() );
 		console.log("What is Your Favorite Color? " + prompt() );
 
+		document.getElementById('new text').innerHTML = 'Sam my classmate is lost';
+		document.getElementById('Name');
+		document.getElementById('Day');
 		</script>
 
 		<!--Using JS with external file-->
