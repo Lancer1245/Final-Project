@@ -12,18 +12,16 @@
 
 		<h1>Look At Console to see message</h1>
 		<h1>Tomorrow is Lance's Friend Day</h1>
-		<h1>He likes Rum Raisin Ice-Cream</h1>
+		<h1 id="cream">He likes Rum Raisin Ice-Cream</h1>
 		<script type="text/javascript">
+
 			//Displays message to console
 			/*Multi
 			line
 			comment*/
 
-			//gets list of all the h1 elements in webpage.
+			
 
-	var h1Elements = document.getElementsByTagName("h1");
-
-	console.log(h1Elements);
 
 	//gets user's info with result hello-name and how are you?
 
@@ -35,7 +33,22 @@
 
 	else {
 	    txt = "Hello " + person + "! How are you today?";
-}
+	}
+
+	    //gets list of all the h1 elements in webpage.
+
+	var h1Elements = document.getElementsByTagName("h1");
+
+	console.log(h1Elements);
+
+	//gets element of specified id
+
+	var creamElement = document.getElementsById("cream");
+	
+	console.log (creamElement);
+
+
+
 		console.log("Hello World");
 		console.log("Boom");
 		console.log("Shocka lacka");
