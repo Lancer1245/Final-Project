@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<div class="center">
+			<h1 id="NewWord"></h1>
+			<h1 id="OldWord"></h1>
+		</div>
+		<script>
+		// Setup storage locations for the words
+			var InputWord = "English word";
+			var OutputWord = "Pig Latin Word";
+
+		// Get input word from the User
+			InputWord = prompt("Please enter word in English");
+
+		// Convert input word and store it in output location
+			OutputWord = InputWord.substring(1,InputWord.lenght) + InputWord.charAt(0) + "ay";
+
+		//Display "English word" and "Pig Latin word"
+			document.getElementById("NewWord").style.textAlign="center";
+		    document.getElementById("NewWord").innerHTML = "The English word is " + InputWord;
+		    document.getElementById("OldWord").style.textAlign="center";
+		    document.getElementById("OldWord").innerHTML = "The Pig Latin word is " + OutputWord;
+		    
+		</script>
+
+
+	</body>
+</html>
