@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array with DOM</title>
+</head>
+<body>
+
+	
+	<h2 id="demo"></h2>
+	<script type="text/javascript">
+
+	//Create Variables fruits and text to alter later.
+
+			var fruits = ['apple', 'oranges', 'kiwi'];
+			var text
+
+			//Use Push to create a prompt.
+
+			fruits.push(prompt('Add more fruits'));
+
+			//Assignment asks to sort the text.
+			text = fruits.sort();
+
+			//Assignment asks to join with using DOM.
+
+			text = fruits.join(" with ");
+			document.getElementById("demo").innerHTML = text;
+
+
+</script>
+
+</body>
+</html>
