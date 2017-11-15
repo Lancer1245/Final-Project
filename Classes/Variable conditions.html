@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+	<script type="text/javascript">
+
+		var age
+		var car
+		var child
+
+		var age = prompt('Enter your age');
+		var car = prompt('How old is your Car?')
+		var child = prompt('How old is your child?')
+
+		//Step1: Determine if age larger than car and age larger than child, then write age is the larger number.
+			if(age > car && age > child)
+			{
+				console.log(age + ', the first entered number is the largest');
+			}
+			//Step 2: Determine if car is larger the child since age was found to be larger the car and child.
+			else if(car > child)
+			{
+			 	console.log(car + ', the second entered number is the largest number');
+			}
+			// Step 3: Display child as the largest number since child was found to be larger the car and age.
+			else 
+			{
+				console.log(child + ', the third entered number is the largest');
+			}
+
+
+	</script>
+
+	</body>
+</html>
