@@ -8,31 +8,46 @@
 	
 	<script type="text/javascript">
 
-	
-		new Date().getMonth()
+		//Declare calendar month, date and year variables. Set the Month's Array
 
-		switch(new Date().getMonth()){
-			case 8:
 
-				console.log('Its September');
-				break;
+		var GetDate = new Date();
+		var Calmonth = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-				case 9:
+		//Perform the switch
 
-				console.log('Its October');
-				break;
+		DayOfTheWeek = GetDate.getDay();
+		var Day;
+			switch (DayOfTheWeek) {
+				case 0: 
+					Day = 'Sunday';
+					break;
+				case 1: 
+					Day = 'Monday';
+					break;
+				case 2: 
+					Day = 'Tuesday';
+					break;
+				case 3: 
+					Day = 'Wednesday';
+					break;
+				case 4: 
+					Day = 'Thursday';
+					break;
+				case 5: 
+					Day = 'Friday';
+					break;
+				case 6: 
+					Day = 'Saturday';
+					break;
+				default:
+					Day = 'That day has not happened yet please reconsider your life choices as well as the day of the week';
 
-				case 10:
+				}
 
-				console.log('Its November');
-				break;
+				//Use DOM to alter h1 to display day of the week on webpage
 
-				case 11:
-
-				console.log('Its December');
-				break;
-
-		}
+					document.getElementById("Switcher").innerHTML = 'Welcome, Class today is ' + Day + "  " + Calmonth[GetDate.getMonth()] + "  " + GetDate.getDate()+ ", " + GetDate.getFullYear();
 
 		
 		
