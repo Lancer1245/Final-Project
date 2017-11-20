@@ -4,15 +4,23 @@
 		<title></title>
 	</head>
 	<body>
+
+	<h1 id="output"></h1>
 	<script type="text/javascript">
 		var x = 0;
-		var y = 2;
 
-		for (; x <= 15; x+= 2) {
-			document.write(x + " is even ");
-		}
+			
+			while(x <= 15){
+				if(x % 2 == 0){
+					document.getElementById("output").innerHTML += '\"' + x + ' is even\"' + ' ';
+				}else {
+					document.getElementById("output").innerHTML += '\"' + x + ' is odd\"' + ' ';
 
-
+				}
+				
+				
+				x++
+			} 
 
 	</script>
 
