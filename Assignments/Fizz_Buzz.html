@@ -15,32 +15,23 @@
 		while(counter <= 100){
 				console.log(counter);
 				//Step 2: Determine if number is a multiple of 3 and/or 5  
-				if(counter % 3 == 0 && counter % 5 == 0 && counter !== 100){
+				if(counter % 3 == 0 && counter % 5 == 0){
 					document.getElementById("output").innerHTML += ' FizzBuzz, ';
 					
+				
 				}
-				else if(counter % 3 == 0 && counter % 5 == 0 && counter !== 100){
-					document.getElementById("output").innerHTML += ' and FizzBuzz. ';
-					
-				}
-				else if (counter % 5 == 0 && counter !== 100){
+				else if (counter % 5 == 0){
 					document.getElementById("output").innerHTML += 'Buzz, ';
 					
 				}
-				else if (counter % 5 == 0 && counter == 100){
-					document.getElementById("output").innerHTML += ' and Buzz. ';
-					
-				}
-				else if (counter % 3 == 0 && counter !== 100){
+				
+				else if (counter % 3 == 0){
 					document.getElementById("output").innerHTML += 'Fizz, ';
 					
 				}
-				else if (counter % 3 == 0 && counter == 100){
-						document.getElementById("output").innerHTML += ' and Fizz. ';
-
-				}
+				
 				else {
-					document.getElementById("output").innerHTML += counter + ', ';
+					document.getElementById("output").innerHTML += counter + ' ';
 				}
 				counter++
 			}
