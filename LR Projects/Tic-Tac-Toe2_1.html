@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	<!--
+	TicTacToe Notes
+
+		Need a 3 by 3 grid
+
+		2 player game 
+		Each player gets a symbol
+		3 in a row wins
+		Draws are a possibility
+		Clear board
+		Restart game
+
+		On hover gray selects intended square
+		Need to create a function that will display player's symbol on the clicked square
+		Need a way to get the square intended
+		Event listener to call function when sqaure is clicked
+		Evaluate if square has already been clicked
+
+		If text is in a square then player must choose another square
+			else square selection is accepted
+
+		Evaluate board 
+
+		per selection is there 3 in a row?
+
+		Is it tied? Are all squared filled?
+
+		Horizontal getElementByTagName("th")
+
+		0 1 2
+		3 4 5
+		6 7 8
+
+		Horizontal
+		0 == 1 && 1 == 2
+		3 == 4 && 4 == 5
+		6 == 7 && 7 == 8
+
+		Verticals
+		0 == 3 && 3 == 6
+		1 == 4 && 4 == 7
+		2 == 5 && 5 == 8
+
+		Diagonal
+
+		0 == 4 && 4 == 8
+		2 == 4 && 4 == 6
+		
+
+
+		Switch players
+
+		Would like for player to choose their symbol
+
+	-->
+
+
+
+		<title></title>
+
+		<style type="text/css">
+
+		
+			table,tr {
+
+				border: solid 5px green;
+				margin: auto;
+			}
+			th{
+				width: 200px;
+				height: 200px;
+				border: solid 5px green;
+				margin: auto;
+				font-size: 400%;
+			}
+
+			th:hover{
+
+			background-color:#cccccc;
+
+			}
+
+		</style>
+		
+	</head>
+
+	<body>
+	<table margin = "50px", align = "center", border="5">
+		<tr>
+			<th id = "square0" onclick="ClickSquare(this)"></th>
+			<th id = "square1" onclick="ClickSquare(this)"></th>
+			<th id = "square2" onclick="ClickSquare(this)"></th>
+		</tr>
+			<tr>
+			<th id = "square3" onclick="ClickSquare(this)"></th>
+			<th id = "square4" onclick="ClickSquare(this)"></th>
+			<th id = "square5" onclick="ClickSquare(this)"></th>
+		</tr>
+		<tr>
+			<th id = "square6" onclick="ClickSquare(this)"></th>
+			<th id = "square7" onclick="ClickSquare(this)"></th>
+			<th id = "square8" onclick="ClickSquare(this)"></th>
+		</tr>
+	</table>
+
+	<script type="text/javascript">
+
+		var player = 'X';
+
+
+		var board =["","","","","","","","",""];
+
+		
+
+		function ClickSquare(square) {
+
+			if(square.innerHTML == ""){
+				square.innerHTML = player;
+				
+				
+				
+				//changes value of player depending on it's value
+				player = (player == 'X') ? 'O' : 'X';
+
+				evalBoard();
+			}
+		}
+
+		function evalBoard(){
+
+			//gets last char of element's id
+				var board = document.getElementsByTagName("th");
+
+			// check if player has won
+
+			var row2in = board[0].innerHTML != '' && board[0].innerHTML == '' && board[1].innerHTML && board[1].innerHTML == board[2].innerHTML;
+			
+			var row2in = board[3].innerHTML != '' && board[3].innerHTML == '' && board[4].innerHTML && board[4].innerHTML == board[5].innerHTML;
+
+			
+				if(row2in || row2in){document.write(player + " Won The Game");
+
+				//If player wins no one can make any more moves
+
+				gamewon = true;
+
+			}
+
+			else{
+				var tie = false;
+				for (var i = 0; i < board.length; i ++){
+					if (board[i].innerHTML == "")
+				{
+					tie = false;
+					break;
+				}
+			}
+
+		}
+
+			var row3in = board[6].innerHTML != '' && board[6].innerHTML == '' && board[7].innerHTML && board[7].innerHTML == board[8].innerHTML; 
+			
+			var row3in = board[0].innerHTML != '' && board[0].innerHTML == '' && board[3].innerHTML && board[3].innerHTML == board[6].innerHTML;
+
+			
+				if( !gamewon && (row3in || row3in)) { document.write(player + " Won The Game");
+			}
+			var row4in = board[1].innerHTML != '' && board[1].innerHTML == '' && board[4].innerHTML && board[4].innerHTML == board[7].innerHTML;
+			
+			var row4in = board[2].innerHTML != '' && board[2].innerHTML == '' && board[5].innerHTML && board[5].innerHTML == board[8].innerHTML;
+			
+				if ( ! gamewon && (row4in || row4in)){document.write(player + " Won The Game");
+			}
+
+			var row5in = board[0].innerHTML != '' && board[0].innerHTML == '' && board[4].innerHTML && board[4].innerHTML == board[8].innerHTML;
+
+			var row5in = board[2].innerHTML != '' && board[2].innerHTML == '' && board[4].innerHTML && board[4].innerHTML == board[6].innerHTML
+			
+				if (! gamewon && (row5in || row5in)) document.write(player + " Won The Game");
+			}
+			
+		
+	</script>
+	</body>
+</html>
