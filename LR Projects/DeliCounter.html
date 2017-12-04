@@ -302,24 +302,10 @@
 
 			function removeServerCustomer() {
 				var tableLengthcheck = document.getElementById("StartTable").rows.length;
-				console.log("Number of Rows in Table before row deletion " + tableLengthcheck);
- 				document.getElementById("StartTable").deleteRow(1);
+				
+ 				document.getElementById("StartTable").deleteRow(-1);
 
- 				// Display Line Empty when only Header row exist in the table
- 				if (tableLengthcheck == "2") {
- 					var startTableDR1 = document.createElement("TR");
-				    startTableDR1.setAttribute("id", "DataRow");
-				    startTableDR1.setAttribute("style", "font-size: 24px");
-				    document.getElementById("StartTable").appendChild(startTableDR1);
-
-				    var startTableDR1C0 = document.createElement("TD");
-				    startTableDR1C0.setAttribute("id", "DataCell");
-				    var t = document.createTextNode("Line Empty");
-				    startTableDR1C0.appendChild(t);
-				    document.getElementById("DataRow").appendChild(startTableDR1C0);
-
-				    document.getElementById("DataCell").colSpan = "3";
- 				}
+ 				
  			}
 		</script>
 	</body>
