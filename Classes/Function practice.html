@@ -4,20 +4,55 @@
 		<title></title>
 	</head>
 	<body>
-
-	<p id="demo"></p>
+	<input type="button" value="Click Me" onclick="DisplayInput()">
+	<h1 id="text"></h1>
+	
 	<script type="text/javascript">
+
+		function DisplayInput() {
+				var input = prompt();
+				document.getElementById("text").innerHTML = formatName(input);
+			}		
+
+			DisplayInput();
+
+			function formatName(name){
+				return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+			}
+
+
+			var car = []
+
+				model: "BMW",
+
+				rimSize:"22"
+
+				pressGas: function(){console.log ("Vrrooom Vroommm")}
+
+		};
+
 		
-		function tellFortune(children,partner,location,job){
 
-			var fortune = 'You will be a' + job + 'have' + children + "with" + partner + 
+		car.pressGas();
 
-			"at" + location;
 
-			document.getElementById('demo').innerHTML = fortune;
+		var popArtist = [
+			{name:  "Michael Jackson", hitSong:"Thriller"},
+
+			{name: "Britney Spears", hitSong: "Hit Me A Baby One More time?"}
+
+		];
+
+		function displayArtists(){
+
+			for(var i =0; i < popArtist.length; i++){
+				document.getElementById("text").innerHTML += popArtist[i].hitSong + "by " + popArtist[i].name + "<br";
+			}
 		}
 
-				
+		displayArtists();
+
+
 
 	</script>
 

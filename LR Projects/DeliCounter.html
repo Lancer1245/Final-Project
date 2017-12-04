@@ -2,100 +2,9 @@
 <html>
 
 	<head>
-		<title>Orders</title>
+		<title>DeliCounter</title>
 
 
-
-		<style type="text/css">
-			.pageHeader {
-				text-align: center;
-				font-size: 14px;
-			    background: ;
-			    border: 1px solid;
-			    background-size: 24px 18px;
-			    padding: 2px;
-			    background-repeat: no-repeat;
-			}
-
-			.SlogonThanks {
-				text-align: center;
-				font-size: 12px;
-			    background: blue;
-			    border: 1px solid;
-			    background-size: 24px 18px;
-			    padding: 2px;
-			    background-repeat: no-repeat;
-			}
-
-			#div3 {
-			    display: inline-block;
-			    width: 40%;
-			}
-
-			#div4 {
-			    display: inline-block;
-			    width: 40%
-			}
-
-			#div5 {
-			    display: center;
-			    width: 40%;
-			    padding: 4px;
-			}
-
-			#div6 {
-			    display: center;
-			    width: 40%;
-			    padding: 2px;
-			}
-
-			.Menu {
-				align: left;
-			    border: 1px solid;
-			    padding-left: 100px;
-			    background-repeat: no-repeat;
-			}
-			.Queue {
-				text-align: center;
-			    border: 1px solid;
-			    background-size: 20px 15px;
-			    background-repeat: no-repeat;
-			}
-
-			.startTD {
-				text-size: 12px;
-			}
-
-			.buttonOrder:hover {
-			    background-color: lime;
-			    border: none;
-			    color: black;
-			    padding: 10px 20px;
-			    text-align: center;
-			    text-decoration: none;
-			    display: inline-block;
-			    font-size: 12px;
-			    margin: 4px 4px;
-			    cursor: pointer;
-			}
-
-			/* <!-- Common styles --> */
-			table, th, td {
-			    border: 1px solid black;
-			    border-collapse: collapse;
-			}
-
-			table {
-				align: center;
-			}
-
-			td {
-				text-size: 12px;
-				 padding: 4px;
-				 empty-cells: show;
-			}
-
-		</style>
 	</head>
 
 	<body onload = openBusiness()>
@@ -107,7 +16,7 @@
 		</div>
 
 		<!--  Display Slogan and Thank You -->
-		<div id = "div2" class="Slogan Thanks">
+		<div id = "div2" class="SlogonThanks">
 			<h2 id = "Slogan"></h2>
 			<h2 id = "Thanks"></h2>
 			
@@ -123,12 +32,13 @@
 				<li>4. Hawain Healer</li>
 				<li>5. Tiramisu</li>
 				<li>6. Grandma's Apple Pie</li>
+				<li>7. Tre's Cherry Pie</li>
 			</ul>
 		</div>
 
+
 		<!-- Take Order -->
 		<div id = "div4">
-		<!--Number: <p id = "tableLengthNumber" onclick="getTableLengthOrder()" value = "OrderNumber"></p> -->
 			Name: <input type="text" id="customer" value="name"><br>
 			Order: <input type="text" id="item" value="choice"><br>
 			<input type="button" onclick="recordOrder()" value ="Place Order" class="buttonOrder">
@@ -147,8 +57,12 @@
 		</div>
 
 		<script type="text/javascript">
-		//Create Customer Line Table
+
 		//Initialize Monitior table
+		var lineEmpty = true;		
+
+		//Create Customer Line Table
+
 		function openBusiness() {
 		    //Create Table
 		    var startTable = document.createElement("TABLE");
@@ -200,7 +114,7 @@
 		}
 
 			//Display monitor name information
-			document.getElementById("monitor").innerHTML = "Deli Monitor";
+			document.getElementById("monitor").innerHTML = "Lancer's Deli Monitor";
 
 			//Display today's date at startup
 			var today = new Date();
@@ -269,10 +183,11 @@
 			document.getElementById("dateInfo").innerHTML = day + " " + month + " " + today.getDate() + ", " + today.getFullYear();
 
 			//Display Slogan
-			var sloganWords = "We Appreciate You.";
+			var sloganWords = "We Appreciate Your Business";
 			var thanks = "Thank You for letting us be of service.";
 			document.getElementById("Slogan").innerHTML = sloganWords;
 			document.getElementById("Thanks").innerHTML = thanks;
+
 
 			//Record Order
 /*			function getTableLengthOrder() {
@@ -284,7 +199,7 @@
 				var tableLength = document.getElementById("StartTable").rows.length; 
 				console.log("Number of Rows in Table before row insertion " + tableLength);
 				//Step1: Remove Line Empty when number of rows in Table is 2
-				if (tableLength <= 2) {
+				if (lineEmpty == true) {
 					document.getElementById("StartTable").deleteRow(1);
 				}
 				//Step2: Add row to table
@@ -294,18 +209,35 @@
 			    var newtd1 = newtr.insertCell(1);
 			    var newtd2 = newtr.insertCell(2);
 
-			    // Step 2: Store customer number, name and order.
-/*			    newtd1.innerHTML = document.getElgetElementById("StartTable").rows.length;*/
+			    // Step 3: Store customer number, name and order.
+			    newtd0.innerHTML = document.getElementById("StartTable").rows.length;
 			    newtd1.innerHTML = document.getElementById("customer").value;
 				newtd2.innerHTML = document.getElementById("item").value;
+
+				//Step 4: Enalble adding rows to table by setting lineEmpty to 
+				lineEmpty = false;
 			}
 
 			function removeServerCustomer() {
 				var tableLengthcheck = document.getElementById("StartTable").rows.length;
-				
- 				document.getElementById("StartTable").deleteRow(-1);
+				console.log("Number of Rows in Table before row deletion " + tableLengthcheck);
+ 				document.getElementById("StartTable").deleteRow(1);
 
- 				
+ 				// Display Line Empty when only Header row exist in the table
+ 				if (tableLengthcheck == "2") {
+ 					var startTableDR1 = document.createElement("TR");
+				    startTableDR1.setAttribute("id", "DataRow");
+				    startTableDR1.setAttribute("style", "font-size: 24px");
+				    document.getElementById("StartTable").appendChild(startTableDR1);
+
+				    var startTableDR1C0 = document.createElement("TD");
+				    startTableDR1C0.setAttribute("id", "DataCell");
+				    var t = document.createTextNode("Line Empty");
+				    startTableDR1C0.appendChild(t);
+				    document.getElementById("DataRow").appendChild(startTableDR1C0);
+
+				    document.getElementById("DataCell").colSpan = "3";
+ 				}
  			}
 		</script>
 	</body>
