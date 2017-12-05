@@ -3,7 +3,21 @@
 
 	<head>
 		<title>DeliCounter</title>
+<style type="text/css">
+	body{
+		background-image: url(https://i.imgur.com/Nbi7bYI.jpg);
+	}
 
+	.pageHeader {
+				text-align: center;
+				font-size: 14px;
+			    background: rgba(255, 255, 255, 0.5);
+			    border: 1px solid rgba(255, 0, 0, 0.4);
+			    background-size: 24px 18px;
+			    padding: 2px;
+			    background-repeat: no-repeat;
+			    }
+</style>
 
 	</head>
 
@@ -180,11 +194,11 @@
 			        month = "December";
 
 			}
-			document.getElementById("dateInfo").innerHTML = day + " " + month + " " + today.getDate() + ", " + today.getFullYear();
+			document.getElementById("dateInfo").innerHTML = "Today is " + day + " " + month + " " + today.getDate() + ", " + today.getFullYear();
 
 			//Display Slogan
 			var sloganWords = "We Appreciate Your Business";
-			var thanks = "Thank You for letting us be of service.";
+			var thanks = "Thank You for letting us be of service";
 			document.getElementById("Slogan").innerHTML = sloganWords;
 			document.getElementById("Thanks").innerHTML = thanks;
 
@@ -224,7 +238,7 @@
  				document.getElementById("StartTable").deleteRow(1);
 
  				// Display Line Empty when only Header row exist in the table
- 				if (tableLengthcheck == "2") {
+ 				if (tableLengthcheck == "5") {
  					var startTableDR1 = document.createElement("TR");
 				    startTableDR1.setAttribute("id", "DataRow");
 				    startTableDR1.setAttribute("style", "font-size: 24px");
