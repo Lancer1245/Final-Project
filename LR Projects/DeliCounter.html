@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
-		<title>DeliCounter</title>
-<style type="text/css">
+	<title>DeliCounter</title>
+	<style type="text/css">
+
+
 	body{
 		background-image: url(https://i.imgur.com/Nbi7bYI.jpg);
 	}
@@ -17,6 +18,83 @@
 			    padding: 2px;
 			    background-repeat: no-repeat;
 			    }
+
+	.SloganThanks {
+				text-align: center;
+				font-size: 14px;
+				/*
+				background: rgba(255, 255, 255, 0.5);
+			    border: 1px solid rgba(255, 0, 0, 0.4);
+			    */
+			    background-size: 24px 18px;
+			    padding: 2px;
+			    background-repeat: no-repeat;
+				}
+
+	.Menu 		{
+
+				text-align: center;
+			    background-repeat: no-repeat;
+			    text-align: center;
+				font-size: 14px;
+				/*
+				background: rgba(255, 255, 255, 0.5);
+			    border: 1px solid rgba(255, 0, 0, 0.4);
+			    */
+			   
+			    background-repeat: no-repeat;
+			}
+			.Queue {
+				border-right: auto;
+				text-align: right;
+			    background-size: 20px 15px;
+			    background-repeat: no-repeat;
+			    float: right;
+				padding-right: 10px;
+			    width: 50%;
+			}
+
+			.orders{
+
+				border-left: auto;
+				text-align: left;
+			    background-size: 20px 15px;
+			    background-repeat: no-repeat;
+			    float: left;
+				padding-left: 10px;
+			    width: 50%;
+			}
+
+
+			.startTD {
+				background-size: 12px;
+				text-align: left;
+			}
+
+			ul {
+  				list-style-type: none;
+  				text-align: center;
+
+  			}
+
+  			.buttonOrder2
+
+  			{
+  				border-right: auto;
+  				position: relative;
+  				float: right;
+  				padding: 10px;
+  			}
+
+
+			
+
+			
+
+
+
+			
+
 </style>
 
 	</head>
@@ -30,16 +108,16 @@
 		</div>
 
 		<!--  Display Slogan and Thank You -->
-		<div id = "div2" class="SlogonThanks">
+		<div id = "div2" class="SloganThanks">
 			<h2 id = "Slogan"></h2>
 			<h2 id = "Thanks"></h2>
 			
 		</div>
 
 		<!-- Display Menu -->
-		<div id = "div3">
-			<h2 >Menu</h2>
-			<ul >
+		<div id = "div3" class="Menu" style="float: center;width: 1400px";>
+			<h2 style="float: center;width: 1425px";>Menu </h2>
+			<ul>
 				<li>1. Hamburger</li>
 				<li>2. Pizza</li>
 				<li>3. Salad</li>
@@ -52,23 +130,23 @@
 
 
 		<!-- Take Order -->
-		<div id = "div4">
+		<div id = "div4" class="orders" style="float-left;width:400px";>
+		<h2>Take Orders</h2>
 			Name: <input type="text" id="customer" value="name"><br>
 			Order: <input type="text" id="item" value="choice"><br>
 			<input type="button" onclick="recordOrder()" value ="Place Order" class="buttonOrder">
 		</div>
 
-		<!-- Display Customers On Line -->
-		<div id = "div5" class="Queue">
-			<h2>Customer Orders</h2>
-		</div>
-
-		<div id = "div6" class="Queue">
-			<h2>Currently Serving</h2>
-			<h2 id = "customerName"></h2>
+		<!-- Display Customers Orders -->
+		<div id = "div5" class="Queue", style="float-right;width:400px";>
+		<h2>Customer Orders</h2>
+		<h2 id = "customerName"></h2>
 			<h2 id = "customerOrder"></h2>
-			<input type="button" onclick="removeServerCustomer()" value="Customer Served" class="buttonOrder">
-		</div>
+			<input type="button" onclick="removeServerCustomer()" value="Customer Served" class="buttonOrder2"><br>
+	</div>
+
+	
+		
 
 		<script type="text/javascript">
 
@@ -238,7 +316,7 @@
  				document.getElementById("StartTable").deleteRow(1);
 
  				// Display Line Empty when only Header row exist in the table
- 				if (tableLengthcheck == "5") {
+ 				if (tableLengthcheck == "2") {
  					var startTableDR1 = document.createElement("TR");
 				    startTableDR1.setAttribute("id", "DataRow");
 				    startTableDR1.setAttribute("style", "font-size: 24px");
