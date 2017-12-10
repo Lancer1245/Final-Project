@@ -241,10 +241,9 @@
 		function openBusiness() {
 		    //Create Table
 		    var startTable = document.createElement("TABLE");
-		    startTable.setAttribute("id", "StartTable");
-		    startTable.setAttribute("align", "center");
-			var div3 = document.getElementById("div5");
-			div3.appendChild(startTable);
+		    startTable.setAttribute("id", "StartTable","text-align","center");
+			var div5 = document.getElementById("div5");
+			div5.appendChild(startTable);
 
 		    //Create caption and add to table		    startTable.setAttribute("id", "StartTable");
 		    var tableCaption = document.createElement("CAPTION");
@@ -276,7 +275,8 @@
 
 		    var startTableDR1 = document.createElement("TR");
 		    startTableDR1.setAttribute("id", "DataRow");
-		    startTableDR1.setAttribute("style", "font-size: 12px");
+		    startTableDR1.setAttribute("style:center", "font-size: 12px");
+		    startTableDR1.setAttribute("aligcusn", "center");
 		    document.getElementById("StartTable").appendChild(startTableDR1);
 
 		    var StartTableDR1C0 = document.createElement("TD");
@@ -285,7 +285,7 @@
 		    StartTableDR1C0.appendChild(t);
 		    document.getElementById("DataRow").appendChild(StartTableDR1C0);
 
-		    document.getElementById("DataCell").colSpan = "3";
+		    document.getElementById("DataCell").colSpan = "1";
 		}
 
 			//Display monitor name information
@@ -379,10 +379,10 @@
 				}
 				//Step2: Add row to table
 				var table = document.getElementById("StartTable");
-			    var newtr = table.insertRow(-1);
+			    var newtr =  table.insertRow(-1);
 			    var newtd0 = newtr.insertCell(0);
 			    var newtd1 = newtr.insertCell(1);
-			    var newtd2 = newtr.insertCell(2);
+			    var newtd2 = newtr.insertCell(1);
 
 			    // Step 3: Store customer number, name and order.
 			    newtd0.innerHTML = document.getElementById("StartTable").rows.length;
@@ -415,15 +415,15 @@
  				}
  			}
 
-			 			var slideIndex = 1;
+			var slideIndex = 1;
 			showSlides(slideIndex);
 
-			// Next/previous controls
+		// Next/previous controls
 		function plusSlides(n) {
 			  showSlides(slideIndex += n);
 			}
 
-			// Thumbnail image controls
+		// Thumbnail image controls
 		function currentSlide(n) {
 			  showSlides(slideIndex = n);
 			}
