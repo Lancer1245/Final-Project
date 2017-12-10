@@ -179,6 +179,10 @@
 			  to {opacity: 1}
 			}
 
+			.block {
+ 				display:block;
+					}
+
 						
 
 			
@@ -438,9 +442,11 @@
 			  }
 			  slides[slideIndex-1].style.display = "block"; 
 			  dots[slideIndex-1].className += " active";
+			  x[slideIndex-1].style.display = "block";
 			}
 
 			var slideIndex = 0;
+
 			showSlides();
 
 		</script>
@@ -448,13 +454,16 @@
 <!-- Slideshow container -->
 <div class="slideshow-container">
 
-  <!-- Full-width images with number and caption text -->
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 7</div>
-    <img src="https://assets3.thrillist.com/v1/image/2691436/size/tmg-article_default_mobile;jpeg_quality=20.jpg" style="width:100%">
-    <div class="text">MMMMMHHMM Burger</div>
-  </div>
+	<!--Display Current Image -->
 
+		<div class="mySlides fade block ">
+	 	<div class="numbertext">1 / 7</div>
+	  <img src="https://assets3.thrillist.com/v1/image/2691436/size/tmg-article_default_mobile;jpeg_quality=20.jpg" style="width:100%">
+	  <div class="text">MMMMHHHMMM Burger</div>
+	</div>
+
+  <!-- Full-width images with number and caption text -->
+  
   <div class="mySlides fade">
     <div class="numbertext">2 / 7</div>
     <img src="http://www.seriouseats.com/recipes/assets_c/2016/05/20160503-spicy-spring-pizza-recipe-37-thumb-1500xauto-431711.jpg" style="width:100%">
