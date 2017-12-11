@@ -46,7 +46,7 @@
 			}
 			.Queue {
 				border-right: auto;
-				text-align: right;
+				text-align: center;
 			    background-size: 20px 15px;
 			    background-repeat: no-repeat;
 			    float: right;
@@ -68,7 +68,7 @@
 
 			.startTD {
 				background-size: 12px;
-				text-align: left;
+				text-align: center;
 			}
 
 			ul {
@@ -259,7 +259,7 @@
 		    document.getElementById("StartTable").appendChild(startTableHR);
 
 		    var StartTableHRC1 = document.createElement("TD");
-		    var t = document.createTextNode("Number");
+		    var t = document.createTextNode("  Ticket    ");
 		    StartTableHRC1.appendChild(t);
 		    document.getElementById("HeaderRow").appendChild(StartTableHRC1);
 
@@ -403,6 +403,7 @@
  					var startTableDR1 = document.createElement("TR");
 				    startTableDR1.setAttribute("id", "DataRow");
 				    startTableDR1.setAttribute("style", "font-size: 24px");
+				    
 				    document.getElementById("StartTable").appendChild(startTableDR1);
 
 				    var startTableDR1C0 = document.createElement("TD");
@@ -411,7 +412,7 @@
 				    startTableDR1C0.appendChild(t);
 				    document.getElementById("DataRow").appendChild(startTableDR1C0);
 
-				    document.getElementById("DataCell").colSpan = "3";
+				    document.getElementById("DataCell").colSpan = "1";
  				}
  			}
 
