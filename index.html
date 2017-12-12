@@ -31,23 +31,26 @@
 			    background-repeat: no-repeat;
 				}
 
+
+
 	.div3		{
 
-				text-align: center;
-			    background-repeat: no-repeat;
+				text-align: left;
+			    background-position: left;
 			    text-align: left;
 				font-size: 14px;
 				border-left: auto;
 			    background-size: 20px 15px;
 			    float: left;
 				padding-left: 10px;
-			    width: 50%;
+			    width: 20%;
+			    margin-left: 20%;
 				/*
 				background: rgba(255, 255, 255, 0.5);
 			    border: 1px solid rgba(255, 0, 0, 0.4);
 			    */
 			   
-			    background-repeat: no-repeat;
+			   
 			}
 			.Queue {
 				border-right: auto;
@@ -217,29 +220,26 @@
 	
 
 
-		<!-- Take Order -->
+		<!-- Take Order Display Menu-->
 		<div id = "div4" class="orders" style="float-left;width:400px";>
 		<h2>Take Orders</h2>
 			Name: <input type="text" id="customer" value="name"><br>
 			Order: <input type="text" id="item" value="choice"><br>
 			<input type="button" onclick="recordOrder()" value ="Place Order" class="buttonOrder">
+		<h2>Menu </h2>
+		<ul>
+		<li>1. Hamburger</li>
+		<li>2. Pizza</li>
+		<li>3. Salad</li>
+		<li>4. Hawain Healer</li>
+		<li>5. Tiramisu</li>
+		<li>6. Grandma's Apple Pie</li>
+		<li>7. Tre's Cherry Pie</li>
+		</ul>
+
 		</div>
 
-		<!-- Display Menu 
-		<div id = "div3", class="Menu", style="float-left; width: 250px";>
-			<h2 id = "div3", class="Menu", style="float-left; width: 250px">Menu </h2>
-			<ul>
-				<li>1. Hamburger</li>
-				<li>2. Pizza</li>
-				<li>3. Salad</li>
-				<li>4. Hawain Healer</li>
-				<li>5. Tiramisu</li>
-				<li>6. Grandma's Apple Pie</li>
-				<li>7. Tre's Cherry Pie</li>
-			</ul>
-		</div>
-
-	-->
+	
 
 		<!-- Display Customers Orders -->
 		<div id = "div5" class="Queue", style="float-right;width:400px";>
@@ -297,7 +297,7 @@
 		    var startTableDR1 = document.createElement("TR");
 		    startTableDR1.setAttribute("id", "DataRow");
 		    startTableDR1.setAttribute("style:center", "font-size: 12px");
-		    startTableDR1.setAttribute("aligcusn", "center");
+		    startTableDR1.setAttribute("align", "center");
 		    document.getElementById("StartTable").appendChild(startTableDR1);
 
 		    var StartTableDR1C0 = document.createElement("TD");
@@ -488,19 +488,19 @@
   
   <div class="mySlides fade">
     <div class="numbertext">2 / 7</div>
-    <img src="http://www.seriouseats.com/recipes/assets_c/2016/05/20160503-spicy-spring-pizza-recipe-37-thumb-1500xauto-431711.jpg" style="width:100%">
+    <img src="http://www.seriouseats.com/recipes/assets_c/2016/05/20160503-spicy-spring-pizza-recipe-37-thumb-1500xauto-431711.jpg", style= "width:100%" >
     <div class="text">Pizza Multiple Toppings</div>
   </div>
 
   <div class="mySlides fade">
     <div class="numbertext">3 / 7</div>
-    <img src="https://prods3.imgix.net/images/articles/2015_07/Social-Classic-Steakhouse-Wedge-Salad-Updated-Fried-Onions-Tarragon-Bacon-Tomato-Modern-Wedge-Recipe.jpg" style="width:100%">
+    <img src="https://prods3.imgix.net/images/articles/2015_07/Social-Classic-Steakhouse-Wedge-Salad-Updated-Fried-Onions-Tarragon-Bacon-Tomato-Modern-Wedge-Recipe.jpg" style="width:100%";>
     <div class="text">Salad</div>
   </div>
 
    <div class="mySlides fade">
     <div class="numbertext"> 4 / 7</div>
-    <img src="https://images1.dallasobserver.com/imager/u/original/9668513/rootspressedjuices_cleanlifesmoothie_bethrankin.jpeg" style=" height: 50%; width:100%">
+    <img src="https://images1.dallasobserver.com/imager/u/original/9668513/rootspressedjuices_cleanlifesmoothie_bethrankin.jpeg" style=" width:99%">
     <div class="text"> Hawaiian Healer</div>
   </div>
 
