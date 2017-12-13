@@ -393,10 +393,9 @@
 */
 			function recordOrder(){
 				var tableLength = document.getElementById("StartTable").rows.length; 
-				console.log("Number of Rows in Table before row insertion " + tableLength);
 				//Step1: Remove Line Empty when number of rows in Table is 2
 				if (lineEmpty == true) {
-					document.getElementById("StartTable").deleteRow(1);
+					document.getElementById("StartTable").deleteRow(-1);
 				}
 				//Step2: Add row to table
 				var table = document.getElementById("StartTable");
@@ -406,7 +405,7 @@
 			    var newtd2 = newtr.insertCell(1);
 
 			    // Step 3: Store customer number, name and order.
-			    newtd0.innerHTML = document.getElementById("StartTable").rows.length;
+			    newtd0.innerHTML = document.getElementById("StartTable").rows.length-1;
 			    newtd1.innerHTML = document.getElementById("customer").value;
 				newtd2.innerHTML = document.getElementById("item").value;
 
