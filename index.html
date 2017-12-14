@@ -223,9 +223,9 @@
 		<!-- Take Order Display Menu-->
 		<div id = "div4" class="orders" style="float-left;width:400px";>
 		<h2>Take Orders</h2>
-			Name: <input type="text" id="customer" value="name"><br>
-			Order: <input type="text" id="item" value="choice"><br>
-			<input type="button" onclick="recordOrder()" value ="Place Order" class="buttonOrder">
+			Name: <input type="text" id="customer" value=""><br>
+			Order: <input type="text" id="item" value=" "><br>
+			<input type="button" style="font-face: 'Comic Sans MS'; font-size: larger; color: white; background-color: #26A65B; border: 3pt ridge" onclick="recordOrder()" value ="Place Order" class="buttonOrder">
 		<h2>Menu </h2>
 		<ul>
 		<li>1. Hamburger</li>
@@ -246,7 +246,7 @@
 		<h2>Customer Orders</h2>
 		<h2 id = "customerName"></h2>
 			<h2 id = "customerOrder"></h2>
-			<input type="button" onclick="removeServerCustomer()" value="Customer Served" class="buttonOrder2"><br>
+			<input type="button" style = "font-face: 'Comic Sans MS'; font-size: larger; color: white; background-color: #ff0000; border: 3pt ridge" onclick="removeServerCustomer()" value="Customer Served" class="buttonOrder2"><br>
 	</div>
 
 	
@@ -402,7 +402,7 @@
 			    var newtr =  table.insertRow(-1);
 			    var newtd0 = newtr.insertCell(0);
 			    var newtd1 = newtr.insertCell(1);
-			    var newtd2 = newtr.insertCell(1);
+			    var newtd2 = newtr.insertCell(2);
 
 			    // Step 3: Store customer number, name and order.
 			    newtd0.innerHTML = document.getElementById("StartTable").rows.length-1;
@@ -461,9 +461,9 @@
 			  for (i = 0; i < dots.length; i++) {
 			      dots[i].className = dots[i].className.replace(" active", "");
 			  }
-			  slides[slideIndex-1].style.display = "block"; 
+			  slides[slideIndex-1]style.display = "block"; 
 			  dots[slideIndex-1].className += " active";
-			  x[slideIndex-1].style.display = "block";
+			  x[slideIndex-1]style.display = "block";
 			}
 
 			var slideIndex = 0;
